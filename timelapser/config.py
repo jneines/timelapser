@@ -7,8 +7,8 @@ from timelapser.paths import config_dir, videos_base_dir
 def read_config(config_name):
     # default config with sane entries
     config = {
-            "videos_base_dir": videos_base_dir,
-            }
+        "videos_base_dir": videos_base_dir,
+    }
 
     # read specified config file
     with (config_dir / f"{config_name}.json").open("r") as fd:

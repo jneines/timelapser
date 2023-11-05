@@ -13,5 +13,12 @@ photos_base_dir = data_dir / "photos"
 
 
 # make sure all directories actually exist
-for _dir in (config_dir, data_dir, log_dir, program_dir, videos_base_dir, photos_base_dir):
+for _dir in (
+    config_dir,
+    data_dir,
+    log_dir,
+    program_dir,
+    videos_base_dir,
+    photos_base_dir,
+):
     _dir.mkdir(exist_ok=True, parents=True)

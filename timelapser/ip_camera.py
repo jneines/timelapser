@@ -4,8 +4,6 @@ import requests
 
 from loguru import logger
 
-logger.info(platform.system())
-
 
 class IPCamera(object):
     def __init__(self, name, snapshot_url, max_attempts=5):

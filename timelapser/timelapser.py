@@ -13,9 +13,9 @@ from timelapser.paths import photos_base_dir
 
 
 class TimeLapser(object):
-    BEFORE_START=2
-    EXECUTING=1
-    COMPLETE=0
+    BEFORE_START = 2
+    EXECUTING = 1
+    COMPLETE = 0
 
     def __init__(self, camera, video_processor, program):
         self.camera = camera
@@ -40,9 +40,7 @@ class TimeLapser(object):
         # camera and day specific photos dir
         photos_dir = photos_base_dir / self.camera.name / f"{now:%Y%m%d}"
         photos_dir.mkdir(exist_ok=True, parents=True)
-        logger.debug(
-            f"Using {photos_dir.as_posix()} to save photos for this program."
-        )
+        logger.debug(f"Using {photos_dir.as_posix()} to save photos for this program.")
 
         wait_for_start = max(0, (self.start_ts - now).total_seconds())
         logger.info(f"Waiting for {wait_for_start} seconds, before starting to shoot.")
@@ -57,7 +55,6 @@ class TimeLapser(object):
                 self.keep_running = False
                 self.return_code = TimeLapser.COMPLETE
                 continue
-            
 
             tic = time.time()
             image = self.camera.get_image()
@@ -90,7 +87,6 @@ class TimeLapser(object):
 
         await self.video_processor.close()
         sys.exit(self.return_code)
-
 
     def exit(self, *args):
         self.keep_running = False

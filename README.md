@@ -1,19 +1,4 @@
-==========
-timelapser
-==========
-
-
-.. image:: https://img.shields.io/pypi/v/timelapser.svg
-        :target: https://pypi.python.org/pypi/timelapser
-
-.. image:: https://img.shields.io/travis/jneines/timelapser.svg
-        :target: https://travis-ci.com/jneines/timelapser
-
-.. image:: https://readthedocs.org/projects/timelapser/badge/?version=latest
-        :target: https://timelapser.readthedocs.io/en/latest/?version=latest
-        :alt: Documentation Status
-
-
+# timelapser
 
 
 Python based timelapsing service for IP cams
@@ -34,20 +19,16 @@ After installing this package, and creating the necessary set of configuration f
 This application makes use of pyythons platformdirs package to locate the correct paths for the config and data dirs used in this package.
 On Linux based systems for example config files have to go in the ${HOME}/.config/timelapser directory, whereas programs have to be stored in the ${HOME}/.local/share/timelapser/programs directory.
 
+Aside from the usual requirements listed in the requirements.txt, the `video_processor` component currently expects an `ffmpeg` binary to be found at `/usr/bin/ffmpeg` in order to operate.
+
 
 * Free software: MIT license
 * Documentation: https://timelapser.readthedocs.io.
 
 
-Features
---------
-
-* TODO
-
-Credits
--------
+### Credits
 
 This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
 
-.. _Cookiecutter: https://github.com/audreyr/cookiecutter
-.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+[Cookiecutter](https://github.com/audreyr/cookiecutter)
+[audreyr/cookiecutter-pypackage](https://github.com/audreyr/cookiecutter-pypackage)
