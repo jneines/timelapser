@@ -1,0 +1,7 @@
+astral
+click
+dateparser
+loguru
+Pillow
+Requests
+setuptools

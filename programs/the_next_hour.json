@@ -1,0 +1,8 @@
+{
+    "name": "fuzzy",
+    "timezone": "Europe/Berlin",
+    "start_ts": "now",
+    "end_ts": "in one hour",
+    "time_margin": 0,
+    "every": 10
+}
