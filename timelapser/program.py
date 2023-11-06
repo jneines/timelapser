@@ -52,7 +52,7 @@ def _load_fuzzy_program(program):
     return program
 
 
-def _load_solar_program(self, program):
+def _load_solar_program(program):
     check_mandatory(program, ["timezone", "latitude", "longitude"])
 
     tz = ZoneInfo(program["timezone"])
@@ -76,7 +76,7 @@ def _load_solar_program(self, program):
     return program
 
 
-def _load_base_program(self, program):
+def _load_base_program(program):
     return program
 
 
@@ -96,5 +96,6 @@ def load_program(program_name):
     with (program_dir / f"{program_name}.json").open("r") as fd:
         _program = json.loads(fd.read())
         program.update(_program)
+        logger.debug(f"{program=}")
 
-        return _program_mapper[_program["name"]](program)
+        return _program_mapper[program["name"]](program)
