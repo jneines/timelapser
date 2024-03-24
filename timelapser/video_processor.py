@@ -42,8 +42,8 @@ class VideoProcessor(object):
             "-nostats "
             "-f image2pipe -i pipe:0 "
             "-f lavfi -i anullsrc -c:a aac "
-            f"-filter:v scale=1280:720 "
-            "-b:v 8M -c:v h264 -profile:v high422 "
+            "-filter:v scale=1280:720 "
+            "-b:v 2M -c:v h264 -profile:v high422 "
             "-shortest "
             f"{video_path}"
         )
